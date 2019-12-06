@@ -1,0 +1,156 @@
+{
+    "title" : "Multiple Intelligence Quiz",
+    "score_multiplier" : 2.5,
+    "questions" : [
+        {
+            "id" : 1,
+            "question" : "What do you find yourself doing more often in a typical week?",
+            "headers" : ["Nope", "A little", "A fair amount", "A lot", "All the time"],
+            "answers" : [
+                {"id" : 0, "answer" : "Totally immersing yourself in a great book.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Doing arts, crafts, or DIY type projects.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Solving puzzles or riddles.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Playing an instrument.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Thinking about your life and considering your future.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Participating in sports.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Spending time in nature.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Working on larger group projects.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 2,
+            "question" : "Which would you prefer to do?",
+            "headers" : ["Nope", "A little", "A fair amount", "A lot", "All the time"],
+            "answers" : [
+                {"id" : 0, "answer" : "Write a poem or story.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Organize a space in your home.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Try to fix something on your own.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Sing a song or play an instrument.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Meditating.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Go for a walk.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Take care of an animal for a friend.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Spend time with friends or family.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 3,
+            "question" : "If you were going on a trip with a group of friends, you would probably...",
+            "headers" : ["Nope", "A little", "A fair amount", "A lot", "All the time"],
+            "answers" : [
+                {"id" : 0, "answer" : "Take notes on things you’ve seen and done along the way.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Organize an itinerary package for everyone.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Determine the best route to take during a trip.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Put together a song list for the car ride.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Close your eyes, put your earbuds in and watch the scenery go by.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Organize car karaoke complete with choreographed moves.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Plan outdoor activities like hiking.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Advise everyone where you are and when the next stop was going to be.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 4,
+            "question" : "Which of these activities appeals to you the most?",
+            "headers" : ["Nope", "A little", "A fair amount", "A lot", "YES!"],
+            "answers" : [
+                {"id" : 0, "answer" : "Write a poem.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Create sidewalk art.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Try to think about a problem scientifically.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Sing a song.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Read a self-improvement book.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Teach a yoga class.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Plant a tree.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Participate in a support group that meets monthly.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 5,
+            "question" : "Which of these statements describes you best?",
+            "headers" : ["Never", "Rarely", "Sometimes", "Often", "Always"],
+            "answers" : [
+                {"id" : 0, "answer" : "I’d like to try my hand at writing a book.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "I want to build something.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "I often set goals for myself and make specific plans for the future considering all angles.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "I like writing songs, singing or creating music.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "I like to meditate and journal.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "I like to keep moving & I am willing to try any new physical activity.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "I like growing herbs and plants.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "I like to try to figure people out.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 6,
+            "question" : "If Free Classes were being offered in your community which one would you most likely sign up for?",
+            "headers" : ["Nope", "Maybe", "Likely", "Sure", "Definitely"],
+            "answers" : [
+                {"id" : 0, "answer" : "Creative Writing.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Landscape painting.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "The theory of everything.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "African drumming.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Manifesting your best life.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Water aerobics.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "How to compost.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Improving communication skills.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 7,
+            "question" : "When you are upset or anxious, which activity calms and re-centers you?",
+            "headers" : ["Never", "Rarely", "Sometimes", "Often", "Always"],
+            "answers" : [
+                {"id" : 0, "answer" : "Journaling.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Painting or sketching.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Doing a crossword or sudoku puzzle.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Playing an instrument or listening to music.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Talking to a therapist or spiritual advisor.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Working out.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Weeding the garden.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Helping another person.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 8,
+            "question" : "The idea of a perfect vacation is...",
+            "headers" : ["Nope", "A little", "A fair amount", "A lot", "Perfect"],
+            "answers" : [
+                {"id" : 0, "answer" : "Writer’s retreat.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Visiting an artist’s colony for a creative workshop.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Visiting museums.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Listening to your favorite band or orchestra in their home town.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Self-discovery or spiritual retreat.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Cycling through a foreign country.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Camping in the woods.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Meeting new people in a retreat for Non-violent communication.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 9,
+            "question" : "What do you enjoy photographing?",
+            "headers" : ["Never", "Rarely", "Sometimes", "Often", "Always"],
+            "answers" : [
+                {"id" : 0, "answer" : "Words. I find messages in the most unlikely places.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "Architecture and sculpture. Design and how it fits into a city makes my heart sing.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "Patterns. I see patterns in all things.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "I’d rather do a video or audio tape. I prefer hearing my friends and family.", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Selfies. I am making peace with my face and body.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "People doing things. Whether I know them or not, I love the body in motion.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "Nature. I love all parts of nature.", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "People. I find all faces and people fascinating.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        },
+        {
+            "id" : 10,
+            "question" : "When facing a challenge, what do you do first?",
+            "headers" : ["Never", "Rarely", "Sometimes", "Often", "Always"],
+            "answers" : [
+                {"id" : 0, "answer" : "Journal. The answer will come if I put everything down that I know about this issue.", "group" : "Linguistic / Word-Smart / Clairsentient"},
+                {"id" : 1, "answer" : "I try to draw what I’m feeling.", "group" : "Visual-Spatial / Picture-Smart / Clairvoyant"},
+                {"id" : 2, "answer" : "I map out the issue with graphs, charts and pro / cons lists.", "group" : "Logical-Mathematical / Number-Smart / Clairsentient"},
+                {"id" : 3, "answer" : "Get lost in a song. After I have relaxed myself, the answer come", "group" : "Musical / Musical-Smart / Clairaudient"},
+                {"id" : 4, "answer" : "Think about how I handled a similar problem in the past.", "group" : "Intrapersonal / Myself-Smart / Clairsentient"},
+                {"id" : 5, "answer" : "Go for a walk. The answers always come when I’m walking.", "group" : "Bodily-Kinesthetic / Body-Smart / Clair-Kinesthetic"},
+                {"id" : 6, "answer" : "I take a moment to go outside. Nature brings me my answer", "group" : "Naturalistic / Nature-Smart / Clair-Kinesthetic"},
+                {"id" : 7, "answer" : "Call a friend. I need to talk it out.", "group" : "Interpersonal / People-Smart / Clairempathic"}
+            ]
+        }
+    ]
+}   

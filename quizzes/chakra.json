@@ -1,0 +1,678 @@
+{
+    "title" : "Chakra Quiz",
+    "score_multiplier" : 6.25,
+    "questions" : [
+        {
+            "id" : 1,
+            "question" : "Do you feel grounded?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "I never feel grounded.", "value" : -2},
+                {"answer" : "I sometimes feel grounded but prefer to be daydreaming.", "value" : -1},
+                {"answer" : "I am grounded and centered on Mother Earth.", "value" : 0},
+                {"answer" : "I often feel exhausted and overly grounded.", "value" : 1},
+                {"answer" : "I am so often grounded that I feel depressed.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 2,
+            "question" : "Do you feel safe?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "I never really feel safe.", "value" : -2},
+                {"answer" : "I am often on edge.", "value" : -1},
+                {"answer" : "Most of the time, I feel safe and secure.", "value" : 0},
+                {"answer" : "I always feel safe, no one would hurt me.", "value" : 1},
+                {"answer" : "I feel safe, even in unsafe situations. I am invincible.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 3,
+            "question" : "Do you worry about the financial situation of your home?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "I am always worried about losing my home, despite the fact that I have enough money.", "value" : -2},
+                {"answer" : "I worry about losing my home fairly often.", "value" : -1},
+                {"answer" : "I don’t worry about the financial situation of my home.", "value" : 0},
+                {"answer" : "My home defines me.", "value" : 1},
+                {"answer" : "I often live above my means, and want a home that others admire and envy.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 4,
+            "question" : "Do you hold onto your money, because you are afraid of being poor?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "I often go on spending binges when I am stressed out or anxious.", "value" : -2},
+                {"answer" : "Spending money comes easy to me. I don’t worry about it at all.", "value" : -1},
+                {"answer" : "I believe it is important to spend money to make money.", "value" : 0},
+                {"answer" : "I often hold back on things I want to buy or invest in, because I am afraid to spend too much.", "value" : 1},
+                {"answer" : "I save everything because I am terrified not to have enough money.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 5,
+            "question" : "How do you feel about change?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "I thrive on chaos.", "value" : -2},
+                {"answer" : "Change is exciting.", "value" : -1},
+                {"answer" : "I’m fine with change.", "value" : 0},
+                {"answer" : "It’s uncomfortable.", "value" : 1},
+                {"answer" : "I hate it.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 6,
+            "question" : "Do you feel in control of your life?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "My life often feels out of control.", "value" : -2},
+                {"answer" : "I don’t feel in control of my life.", "value" : -1},
+                {"answer" : "I am able to make decisions and take control of my life.", "value" : 0},
+                {"answer" : "I prefer to be in control of situations, whether they involve me or not.", "value" : 1},
+                {"answer" : "I am not in control, I feel anxious and insecure.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 7,
+            "question" : "Do you feel at home?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "Never. I just don’t fit in.", "value" : -2},
+                {"answer" : "I have one or two places that feel like home.", "value" : -1},
+                {"answer" : "I adapt to places easily and feel at home with people.", "value" : 0},
+                {"answer" : "I feel at home when others like me.", "value" : 1},
+                {"answer" : "I get attached to people, places and things very easily.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 8,
+            "question" : "Do you suffer with anxiety?",
+            "question_section" : "Root Chakra",
+            "answers" : [
+                {"answer" : "I suffer with anxiety on a day to day business.", "value" : -2},
+                {"answer" : "I am often anxious.", "value" : -1},
+                {"answer" : "I have a normal level of anxiety.", "value" : 0},
+                {"answer" : "I don’t have anxiety. I am cool as a cucumber.", "value" : 1},
+                {"answer" : "I do not allow myself to be out of control like that.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 9,
+            "question" : "Do you feel comfortable with emotions?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "I have trouble expressing emotion and being around others who express their emotions easily.", "value" : -2},
+                {"answer" : "I am not always comfortable with emotion.", "value" : -1},
+                {"answer" : "I am comfortable with expressing my emotions and sitting with other’s emotions.", "value" : 0},
+                {"answer" : "I am often overly emotional, crying at a drop of a hat.", "value" : 1},
+                {"answer" : "I feel others should hear and understand my emotions at all times. I often have crying tantrums, angry outbursts, and anxiety.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 10,
+            "question" : "Are you creative?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "I am not creative and have trouble thinking outside of the box.", "value" : -2},
+                {"answer" : "I am not creative, but think creatively.", "value" : -1},
+                {"answer" : "I am a creative person.", "value" : 0},
+                {"answer" : "I am creative in all aspects of my life, and cannot relate to uncreative people.", "value" : 1},
+                {"answer" : "I am an amazing artist and creative being. I have trouble relating to boring people.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 11,
+            "question" : "Do you become obsessive about people, things, foods, or alcohol/drugs?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "I don’t feel any attachment to people, things, food or alcohol. ", "value" : -2},
+                {"answer" : "I feel disconnected from people, things, food or alcohol.", "value" : -1},
+                {"answer" : "I enjoy people, things, food, and alcohol in moderation.", "value" : 0},
+                {"answer" : "When I enjoy something or someone, I find myself thinking about it all the time.", "value" : 1},
+                {"answer" : "If I enjoy someone or something, I become obsessed with it and cannot get enough.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 12,
+            "question" : "Do you feel you can express your sexual feelings?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "I am not comfortable expressing my sexual feelings.", "value" : -2},
+                {"answer" : "I experience some discomfort expressing my sexual feelings.", "value" : -1},
+                {"answer" : "I am comfortable expressing my sexual feelings.", "value" : 0},
+                {"answer" : "I am very comfortable expressing my sexual feelings.", "value" : 1},
+                {"answer" : "I always talk about sex and my sexual feelings.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 13,
+            "question" : "Do you easily attach to romantic partners and friends, feeling upset or panicked when they need time alone?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "I have trouble connecting with partners.", "value" : -2},
+                {"answer" : "It takes me a while to warm up to romantic partners and friends.", "value" : -1},
+                {"answer" : "I attach to friends and partners, but don’t get threatened by distance or time alone.", "value" : 0},
+                {"answer" : "I easily make friends and romantic partners, and get nervous when I don’t hear from them every day.", "value" : 1},
+                {"answer" : "I attach quickly and deeply to romantic partners and friends, and panic if they need time alone.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 14,
+            "question" : "Do you deny yourself pleasure or joy?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "Yes, pleasure and joy feel wrong and sinful.", "value" : -2},
+                {"answer" : "Sometimes, I feel uncomfortable receiving pleasure, or experiencing too much joy.", "value" : -1},
+                {"answer" : "I enjoy my life and take pleasure in my life.", "value" : 0},
+                {"answer" : "Life is all about pleasures and joys. I rarely say no to myself.", "value" : 1},
+                {"answer" : "I never restrict joy or pleasure. If I enjoy something, I cannot get enough of it.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 15,
+            "question" : "Do you cross boundaries with people in your life?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "Boundaries help me feel safe. If anything, I keep too many boundaries with others.", "value" : -2},
+                {"answer" : "Boundaries are deeply important to me. I don’t allow others in easily.", "value" : -1},
+                {"answer" : "No, I am good at keeping and honoring boundaries with friends and loved ones.", "value" : 0},
+                {"answer" : "I have been told I am smothering my friends and loved ones.", "value" : 1},
+                {"answer" : "I often cross boundaries with people by inserting myself into people’s life without permission.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 16,
+            "question" : "Are you emotionally sensitive?",
+            "question_section" : "Sacral Chakra",
+            "answers" : [
+                {"answer" : "No. I don’t care what people think of me, nor how I affect others.", "value" : -2},
+                {"answer" : "No, I am a tough nut to crack emotionally.", "value" : -1},
+                {"answer" : "I get hurt at times, but mostly, I work on not taking things personally.", "value" : 0},
+                {"answer" : "Yes, I am very sensitive to what others think or feel about me. ", "value" : 1},
+                {"answer" : "Yes, I often am hurt by what others say about me, and when people are laughing, I am sure it about me.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 17,
+            "question" : "Are you indecisive?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "I have trouble making decisions and need to check with many different people before moving forward with a decision.", "value" : -2},
+                {"answer" : "I am insecure with my decision making abilities.", "value" : -1},
+                {"answer" : "I make decisions easily.", "value" : 0},
+                {"answer" : "I don’t have problems making decisions, and do not like to hear input from others about my decision.", "value" : 1},
+                {"answer" : "I know what is best for me, and for other people. My biggest problem is dealing with other people’s decisions.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 18,
+            "question" : "Are you comfortable in leadership positions?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "I am deeply uncomfortable being in a leadership position.", "value" : -2},
+                {"answer" : "I am more of a follower, but step up when called upon.", "value" : -1},
+                {"answer" : "I am comfortable as a leader and as a follower.", "value" : 0},
+                {"answer" : "I like to be the leader.", "value" : 1},
+                {"answer" : "I need to be in the leadership position. I am deeply uncomfortable as a follower.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 19,
+            "question" : "Are you self-confident?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "Not at all. I have trouble finding my self-worth.", "value" : -2},
+                {"answer" : "I struggle finding my confidence.", "value" : -1},
+                {"answer" : "I am a confident person, but not arrogant.", "value" : 0},
+                {"answer" : "I am confident because I have accomplished a great deal. My worth is dependent on acheivements.", "value" : 1},
+                {"answer" : "Of course. I am the best person for the job, no matter what the job is.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 20,
+            "question" : "Are you independent?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "No, I do not feel confident going out on my own. I prefer when someone else is taking care of things in my life.", "value" : -2},
+                {"answer" : "Not too much, I need other people to feel whole.", "value" : -1},
+                {"answer" : "I am an independent person. I take care of myself.", "value" : 0},
+                {"answer" : "I define myself by my independence—I do not need other people.", "value" : 1},
+                {"answer" : "I cannot handle other people trying to control my life. I am independent and often push people away.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 21,
+            "question" : "Are you afraid of failure?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "I often do not try things for fear of failure.", "value" : -2},
+                {"answer" : "I often limit things I try because I know I will not be good at it.", "value" : -1},
+                {"answer" : "Failure is the first steps to success. I often fail and then keep trying.", "value" : 0},
+                {"answer" : "I don’t often fail. I stick to it.", "value" : 1},
+                {"answer" : "Failure is not an option.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 22,
+            "question" : "Do you feel easily manipulated by people?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "Yes, I always seem to attract people who use me to get ahead.", "value" : -2},
+                {"answer" : "Yes, I am naïve and overly trusting.", "value" : -1},
+                {"answer" : "I can often see through people who are using me.", "value" : 0},
+                {"answer" : "No, I am often in control of the situation.", "value" : 1},
+                {"answer" : "Never. I control the people around me, not the other way around.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 23,
+            "question" : "Do you dominate social gatherings or projects that involve a team?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "No, I prefer to sit back and watch.", "value" : -2},
+                {"answer" : "Not particularly, I am more of a team player than leader.", "value" : -1},
+                {"answer" : "I speak up and share my opinion, but don’t yell over people.", "value" : 0},
+                {"answer" : "I tend to take control of situations when given an opening.", "value" : 1},
+                {"answer" : "I need to be in control. I am good at leading groups.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 24,
+            "question" : "Do you need to have the last word in an argument?",
+            "question_section" : "Solar Plexus",
+            "answers" : [
+                {"answer" : "No. I always end up crying and apologizing or agreeing to make things okay.", "value" : -2},
+                {"answer" : "Not really, I often allow others to “win” arguments.", "value" : -1},
+                {"answer" : "I often choose happiness or being right in an argument, but I allow my side to be heard.", "value" : 0},
+                {"answer" : "Yes, I often extend arguments to get my point across.", "value" : 1},
+                {"answer" : "Yes, I am right, and don’t feel comfortable when I feel misunderstood or unheard.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 25,
+            "question" : "Do you love yourself and express compassion for yourself?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "I am pretty hard on myself, and hold myself to high standards. ", "value" : -2},
+                {"answer" : "I struggle with seeing myself worthy of love.", "value" : -1},
+                {"answer" : "I love myself and deserve the same compassion that I extend others.", "value" : 0},
+                {"answer" : "I am suspicious of people who say they love themselves—it sounds so arrogant.", "value" : 1},
+                {"answer" : "I unconditionally love and accept other people, but cannot seem to do this for myself.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 26,
+            "question" : "Do people tell you that you are warming and welcoming?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "No, I am often told I seem cold and unwelcoming.", "value" : -2},
+                {"answer" : "Not often. People usually seem to have an opinion of me as detached.", "value" : -1},
+                {"answer" : "I am often told I am warm and welcoming.", "value" : 0},
+                {"answer" : "Yes, I often put others before myself.", "value" : 1},
+                {"answer" : "My identity is to be loving and kind. I have a really hard time saying no to others because I don’t want to seem mean or cold.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 27,
+            "question" : "Do you find yourself judging others harshly?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "Yes, I often judge people’s behaviors and actions.", "value" : -2},
+                {"answer" : "At times, my default mode is judging, but I’m working on it.", "value" : -1},
+                {"answer" : "I try to see all sides of a situation, and don’t judge people too quickly.", "value" : 0},
+                {"answer" : "No! I always give people the benefit of the doubt and trust they are well-meaning.", "value" : 1},
+                {"answer" : "No, in fact, I am often accused of not being discerning enough. I have been taken advantage of a few times.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 28,
+            "question" : "Do you put the needs of others before your own needs?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "Never. I am suspicious of needy people.", "value" : -2},
+                {"answer" : "Not often, I take care of my needs first, and then do my due diligence to make sure they deserve my help.", "value" : -1},
+                {"answer" : "I weigh the needs of others with myself, trying to treat myself equally as others.", "value" : 0},
+                {"answer" : "Yes, I take care of others before me. That is just who I am.", "value" : 1},
+                {"answer" : "Yes, absolutely, I would give a stranger the clothes off my back, and my last dollar. I am a giver.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 29,
+            "question" : "Are you forgiving?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "No, I often hold grudges for years at a time.", "value" : -2},
+                {"answer" : "I struggle with forgiving people, but I’m working on it.", "value" : -1},
+                {"answer" : "I hold forgiveness as a virtue, and work on practicing it in my life.", "value" : 0},
+                {"answer" : "I forgive easily.", "value" : 1},
+                {"answer" : "Yes, I forgive and forget. ", "value" : 2}
+            ]
+        },
+        {
+            "id" : 30,
+            "question" : "Do you resent how much others ask of you and how much you do for other people?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "Yes, I keep mental score of what I have done for whom, and what they have done for me.", "value" : -2},
+                {"answer" : "I don’t allow people to ask too much of me.", "value" : -1},
+                {"answer" : "I keep strong boundaries and only do things for people I am willing to do without expecting anything in return.", "value" : 0},
+                {"answer" : "Sometimes, I have a tendency to say yes to everything.", "value" : 1},
+                {"answer" : "Yes, I feel like I am always doing for others, and no one does for me.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 31,
+            "question" : "Do you feel other people’s emotions for them, sometimes crying or feeling physical pain, nausea or sickness when other people are suffering?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "Never. I have trouble feeling my own emotions and cannot read other people’s emotions easily.", "value" : -2},
+                {"answer" : "Not really, I struggle with reading other people’s emotions.", "value" : -1},
+                {"answer" : "I feel compassion for other people when they are suffering, but do not cry or feel their feelings.", "value" : 0},
+                {"answer" : "Sometimes, I find myself tearing up when others are crying or suffering. ", "value" : 1},
+                {"answer" : "Always, I often get physically ill or emote when other people are feeling emotions around me. I cannot help it.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 32,
+            "question" : "Do you feel loved and connected to people in your life?",
+            "question_section" : "Heart Chakra",
+            "answers" : [
+                {"answer" : "No, I feel bitter and lonely more often than I care to admit.", "value" : -2},
+                {"answer" : "Not often, I am socially awkward, and feel unlovable.", "value" : -1},
+                {"answer" : "I feel loved and connected to my family, building healthy and trusting relationships over time.", "value" : 0},
+                {"answer" : "Yes, often, I fall in love with people easily and connect quickly.", "value" : 1},
+                {"answer" : "Yes, all the time. I give everything to the people in my life, my identity is tied to my relationships. ", "value" : 2}
+            ]
+        },
+        {
+            "id" : 33,
+            "question" : "Do you articulate your emotions well?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "No, I have a hard time understanding what I am feeling.", "value" : -2},
+                {"answer" : "Not really, I have a hard time putting words to my feelings.", "value" : -1},
+                {"answer" : "I am able to articulate my emotions clearly and consisely.", "value" : 0},
+                {"answer" : "I often overexplain my emotions so I feel understood.", "value" : 1},
+                {"answer" : "When I feel threatened, or overly emotional, I cannot stop talking. I take my frustrations out by punishing others with my thoughts on how I feel.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 34,
+            "question" : "Is your voice strong and clear?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "No, I often whisper or talk softly.", "value" : -2},
+                {"answer" : "Not really. My voice wavers when I try to speak.", "value" : -1},
+                {"answer" : "I speak with confidence and clarity.", "value" : 0},
+                {"answer" : "Sometimes. I often get louder to make my point.", "value" : 1},
+                {"answer" : "Yes. I am always the loudest person in the room.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 35,
+            "question" : "Do you have a fear of public speaking or a fear of speaking on the phone to strangers?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "Yes, my biggest fear is public speaking, and I don’t talk on the phone.", "value" : -2},
+                {"answer" : "I get very anxious speaking in front of people or to strangers.", "value" : -1},
+                {"answer" : "I am a confident public speaker, and don’t mind calling strangers.", "value" : 0},
+                {"answer" : "Not really, I am in my element talking to anyone. I am hypercommunicative.", "value" : 1},
+                {"answer" : "No, I often feel most comfortable talking to strangers and to groups of people. I dominate conversations.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 36,
+            "question" : "Are you comfortable expressing who you are in different ways?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "I find it difficult to express who I am through talking, artwork, or writing.", "value" : -2},
+                {"answer" : "I am often anxious about expressing who I am through talking or writing.", "value" : -1},
+                {"answer" : "I express myself and who I am in different ways, including through writing , artwork or music.", "value" : 0},
+                {"answer" : "I find it difficult to be concise when talking about myself. I have too many aspects of me to express through a sentence or two.", "value" : 1},
+                {"answer" : "I fear not being heard, so I tend to talk about myself to anyone who will listen.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 37,
+            "question" : "Are you a chatterbox?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "No, not at all. I tend to be stoic and quiet.", "value" : -2},
+                {"answer" : "Not really. It takes me a while to open up.", "value" : -1},
+                {"answer" : "When I am connecting with someone, I love the flow of conversation.", "value" : 0},
+                {"answer" : "Sometimes, when I am uncomfortable, I tend to talk to fill silence.", "value" : 1},
+                {"answer" : "Yes, I like to talk and often find myself talking to strangers, friends, and anyone who will listen.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 38,
+            "question" : "Do you yell or speak very loudly when in a disagreement with someone?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "No, I tend to get more quiet, and use their words against them.", "value" : -2},
+                {"answer" : "Not really, I shut down more than yell.", "value" : -1},
+                {"answer" : "I try to listen as much as speak when I disagree with someone.", "value" : 0},
+                {"answer" : "Sometimes, I tend to raise my voice when I feel unheard.", "value" : 1},
+                {"answer" : "Always! I scream when I am in an argument. That is what an argument is!", "value" : 2}
+            ]
+        },
+        {
+            "id" : 39,
+            "question" : "Do you understand your purpose in life?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "No, I feel like my life lacks a strong purpose. I don’t know what I am supposed to do.", "value" : -2},
+                {"answer" : "Not always, I am often confused about my soul’s path.", "value" : -1},
+                {"answer" : "I have a strong purpose in this life. I know why I am here.", "value" : 0},
+                {"answer" : "Yes, I can feel I have a bigger purpose in this life, and most people wouldn’t understand.", "value" : 1},
+                {"answer" : "Always I know I am better than others, and I have a Higher Purpose here than others.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 40,
+            "question" : "Do you feel you can hear your guides and angels?",
+            "question_section" : "Throat Chakra",
+            "answers" : [
+                {"answer" : "No. I don’t believe in anything I cannot see.", "value" : -2},
+                {"answer" : "Not really, I listen, but seem to block messages coming through.", "value" : -1},
+                {"answer" : "I feel connected to my guides and angels, hearing them in meditations and receiving signs and messages from them.", "value" : 0},
+                {"answer" : "I have too much trouble sitting still and listening. Meditation is too hard for me.", "value" : 1},
+                {"answer" : "I know just what I need, I don’t need to listen to my guides and angels.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 41,
+            "question" : "Do you rely on your intuition?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "Never. I am based in logic and distrust intuition.", "value" : -2},
+                {"answer" : "Not really, I am not very intuitive.", "value" : -1},
+                {"answer" : "I use an equal amount of logic and intuition.", "value" : 0},
+                {"answer" : "Often, my intuition is more trustworthy than my logic.", "value" : 1},
+                {"answer" : "I am given direct instructions about my life, and know my intuition is stronger than any “facts.”", "value" : 2}
+            ]
+        },
+        {
+            "id" : 42,
+            "question" : "Do you find it difficult to visualize things?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "I am not good at visualizing. ", "value" : -2},
+                {"answer" : "If I am being guided through it, I can sometimes visualize.", "value" : -1},
+                {"answer" : "I can visualize and have a strong grasp on what is real and what is not real.", "value" : 0},
+                {"answer" : "I visualize often, I often feel more comfortable in my daydreams.", "value" : 1},
+                {"answer" : "I visualize easily, and have difficulty differentiating between reality and fantasy.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 43,
+            "question" : "Do you find it easy to recall your dreams?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "I do not dream.", "value" : -2},
+                {"answer" : "I only very rarely remember my dreams.", "value" : -1},
+                {"answer" : "I often dream and remember them.", "value" : 0},
+                {"answer" : "My dreams are vivid, but I do not often recall them.", "value" : 1},
+                {"answer" : "I have disturbing nightmares and dreams, and often wake up confused if I am still dreaming.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 44,
+            "question" : "Do you struggle with analyzing decisions?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "I cannot make a firm decision, there are too many things to consider.", "value" : -2},
+                {"answer" : "I really struggle with trusting myself.", "value" : -1},
+                {"answer" : "I make decisions in a state of neutrality, concerned by not attached to any outcome.", "value" : 0},
+                {"answer" : "I get too attached to any one outcome.", "value" : 1},
+                {"answer" : "I find myself overwhelmed by possibilities and cannot make decisions easily.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 45,
+            "question" : "Are you prone to nostalgia?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "Yes, I often am unable to let go of the past.", "value" : -2},
+                {"answer" : "At times, I get stuck in thinking about the past.", "value" : -1},
+                {"answer" : "I honor my past, because it brought me where I am today, but I don’t get stuck in it.", "value" : 0},
+                {"answer" : "I find myself more worried about my future.", "value" : 1},
+                {"answer" : "No, I experience paranoia about my future, and anxiety about what is to come.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 46,
+            "question" : "Do you often find yourself day dreaming, or in a fantasy world?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "Fantasy and day dreaming are for children and immature people.", "value" : -2},
+                {"answer" : "When my mind drifts, I fear losing control.", "value" : -1},
+                {"answer" : "I have a normal amount of day dreaming, but it does not overtake my thoughts.", "value" : 0},
+                {"answer" : "Yes, I am very comfortable in daydreams and fantasy world.", "value" : 1},
+                {"answer" : "Yes, I struggle with knowing what is fantasy and what is reality.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 47,
+            "question" : "What is your overall perception of life?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "My overall perception of life is negative. Life is hard and I don’t have a sense of direction.", "value" : -2},
+                {"answer" : "Life is hard. I often feel cynical.", "value" : -1},
+                {"answer" : "I can see my past, present and future clearly, and feel in the flow of life.", "value" : 0},
+                {"answer" : "Most people, don’t see the world as clearly as me.", "value" : 1},
+                {"answer" : "Life is overwhelming. I much prefer my dreams.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 48,
+            "question" : "Are you psychic?",
+            "question_section" : "Third Eye",
+            "answers" : [
+                {"answer" : "No, I don’t believe in psychic abilities.", "value" : -2},
+                {"answer" : "Not really, I try to open up to it, but I don’t have any abilities.", "value" : -1},
+                {"answer" : "I have clairvoyant and/or clairaudient abilities, and have the ability to turn them on and off.", "value" : 0},
+                {"answer" : "Most times, I believe my visions more than real life.", "value" : 1},
+                {"answer" : "I have trouble discerning between my visions and reality.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 49,
+            "question" : "Do you feel connected to the universe and to the stream of life?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "No, I feel spiritually disconnected.", "value" : -2},
+                {"answer" : "Not always, I sometimes feel disconnected from life.", "value" : -1},
+                {"answer" : "I feel connected to all that is, and have a clear direction in my life.", "value" : 0},
+                {"answer" : "Sometimes I feel very connected, then I lose my sense of grounding.", "value" : 1},
+                {"answer" : "I feel detached from the world, and more at home in fantasy world.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 50,
+            "question" : "Do you have a pronounced fear of death?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "Yes, I have a debilitating fear of death.", "value" : -2},
+                {"answer" : "At times, I fear my death and the death of those I love.", "value" : -1},
+                {"answer" : "I neither fear death or life.", "value" : 0},
+                {"answer" : "Death depresses me.", "value" : 1},
+                {"answer" : "I do not think about death much. I feel detached from life and death.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 51,
+            "question" : "Do you feel that coincidence is meaningful and not random?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "Not really.", "value" : -2},
+                {"answer" : "Sometimes.", "value" : -1},
+                {"answer" : "Yes, I find meaning in coincidence. I feel connected to all that is.", "value" : 0},
+                {"answer" : "I find coincidence interesting, but don’t think it has deeper meaning.", "value" : 1},
+                {"answer" : "I often feel like I see all the pictures, but cannot put them together to make meaning for myself.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 52,
+            "question" : "Are you aware of being the expression of something much bigger than yourself?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "No. I am the biggest thing that is.", "value" : -2},
+                {"answer" : "Sometimes.", "value" : -1},
+                {"answer" : "Yes, I feel connected to the Divine, and understand all that I am.", "value" : 0},
+                {"answer" : "I feel detached from making connections between me and something bigger.", "value" : 1},
+                {"answer" : "I do not often thinking of this.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 53,
+            "question" : "Do you visit many psychics, spiritual teachers and gurus throughout the month, looking for guidance and answers?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "I do not believe in psychics or gurus.", "value" : -2},
+                {"answer" : "Not really, I feel disconnected from messages.", "value" : -1},
+                {"answer" : "I visit psychics, spiritual teachers and gurus every so often looking for guidance and answers.", "value" : 0},
+                {"answer" : "Yes, I visit lots of different psychics and spiritual healers for answers, but never seem to hear what I need.", "value" : 1},
+                {"answer" : "I cannot make decisions without visiting a psychic, spiritual teacher or guru.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 54,
+            "question" : "Do you feel overly cynical about religion, spirituality and spiritual people?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "Yes, I think religion, spirituality and spiritual people are trying to con people.", "value" : -2},
+                {"answer" : "I feel disconnected from religion and spirituality.", "value" : -1},
+                {"answer" : "I have a strong spiritual center, and respect for religion.", "value" : 0},
+                {"answer" : "I have followed many different religions and paths.", "value" : 1},
+                {"answer" : "I feel like I am my own religion and spiritual guru.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 55,
+            "question" : "Do you connect with other people?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "No, I often feel isolated and lonely.", "value" : -2},
+                {"answer" : "Not often, I have an inability to connect with others.", "value" : -1},
+                {"answer" : "I feel connected with all that is, and all people.", "value" : 0},
+                {"answer" : "I am often in another world. People don’t relate to me.", "value" : 1},
+                {"answer" : "Not really, I feel like I am from outer space.", "value" : 2}
+            ]
+        },
+        {
+            "id" : 56,
+            "question" : "How does your energy feel?",
+            "question_section" : "Crown Chakra",
+            "answers" : [
+                {"answer" : "My energy feels dense and heavy. ", "value" : -2},
+                {"answer" : "My energy feels dense.", "value" : -1},
+                {"answer" : "My energy feels grounded and clear.", "value" : 0},
+                {"answer" : "My energy feels light and detached.", "value" : 1},
+                {"answer" : "My energy feels ungrounded and spacey.", "value" : 2}
+            ]
+        }
+    ]
+}

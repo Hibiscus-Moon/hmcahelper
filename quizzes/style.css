@@ -1,0 +1,16 @@
+#progressBar {
+    height: 5px;
+    width: 0;
+    background-color: #5C3E94;
+}
+.graph td {
+    text-align: center;
+    vertical-align: middle;
+}
+.bar {
+    height: 5px;
+    background-color: #5C3E94;
+}
+.graph .label {
+    text-align: right;
+}
