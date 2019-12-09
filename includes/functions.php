@@ -1,5 +1,64 @@
 <?php
 
+function hmca_header_scripts(){ 
+
+    $id = get_the_ID();
+
+    $hide_header_optin = get_post_meta( $id, 'hmcaoptin_hide_header_optin', true ); 
+    if ( $hide_header_optin ) { ?>
+        <style>
+            .pum.pum-overlay {display: none !important;}
+        </style>
+    <?php } ?>
+
+    <!-- Deadline Funnel -->
+    <script type="text/javascript" data-cfasync="false">function SendUrlToDeadlineFunnel(e){var r,t,c,a,h,n,o,A,i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",d=0,l=0,s="",u=[];if(!e)return e;do r=e.charCodeAt(d++),t=e.charCodeAt(d++),c=e.charCodeAt(d++),A=r<<16|t<<8|c,a=A>>18&63,h=A>>12&63,n=A>>6&63,o=63&A,u[l++]=i.charAt(a)+i.charAt(h)+i.charAt(n)+i.charAt(o);while(d<e.length);s=u.join("");var C=e.length%3;var decoded = (C?s.slice(0,C-3):s)+"===".slice(C||3);decoded = decoded.replace("+", "-");decoded = decoded.replace("/", "_");return decoded;} var url = SendUrlToDeadlineFunnel(location.href);var parentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(document.referrer)) : "";(function() {var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.setAttribute("data-scriptid", "dfunifiedcode");s.src ="https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkRcL0Y5bHdhNnBZUU5NUUNiTWV6M29BPT0iLCJ2YWx1ZSI6IjZEZUhneXJXclwvb0ZrU1dRdFZ5Nk1nPT0iLCJtYWMiOiJjMWUyZTMyZjNhN2NmYmQ0OTA3ZWY5Y2ZlMmU4YTczMjRhYTVlNDlkN2Y2NzEwMzZjNDA2NDVmMTFlOTIxMjhmIn0=&pageFromUrl="+url+"&parentPageFromUrl="+parentUrl;var s2 = document.getElementsByTagName("script")[0];s2.parentNode.insertBefore(s, s2);})();</script><!-- End Deadline Funnel -->
+
+    <script src="https://kit.fontawesome.com/6e0c322d24.js"></script>
+
+    <!-- <script type="text/javascript" src="https://my.hellobar.com/b38b7e9e36c8ad5482cd32aa93cd5a03181ab1b0.js" async="async"></script> -->
+
+<?php }
+add_action( 'wp_head', 'hmca_header_scripts', 10 );
+
+
+
+
+function hmca_footer_scripts() { ?>
+    <script type="text/javascript">
+        // Set to false if opt-in required
+        var trackByDefault = true;
+
+        function acEnableTracking() {
+            var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
+            document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
+            acTrackVisit();
+        }
+
+        function acTrackVisit() {
+            var trackcmp_email = '';
+            var trackcmp = document.createElement("script");
+            trackcmp.async = true;
+            trackcmp.type = 'text/javascript';
+            trackcmp.src = '//trackcmp.net/visit?actid=799050921&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+            var trackcmp_s = document.getElementsByTagName("script");
+            if (trackcmp_s.length) {
+                trackcmp_s[0].parentNode.appendChild(trackcmp);
+            } else {
+                var trackcmp_h = document.getElementsByTagName("head");
+                trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+            }
+        }
+
+        if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
+            acEnableTracking();
+        }
+    </script>
+<?php }
+add_action( 'wp_footer', 'hmca_footer_scripts', 10);
+
+
+
 
 add_action( 'cmb2_admin_init', 'cmb2_hmcaoptin_metabox' );
 /**
@@ -31,21 +90,16 @@ function cmb2_hmcaoptin_metabox() {
     		'type' => 'checkbox',
 	) );
 
+    $hmcaoptin->add_field( array(
+            'name' => 'Display Optin Bar',
+            'desc' => 'Check box to show full width optin bar',
+            'id'   => $prefix . 'show_optin_bar',
+            'type' => 'checkbox',
+    ) );
+
 
 }
 
-
-function hmca_header_scripts() { 
-	$id = get_the_ID();
-
-	$hide_header_optin = get_post_meta( $id, 'hmcaoptin_hide_header_optin', true ); 
-	if ( $hide_header_optin ) { ?>
-		<style>
-		    .pum.pum-overlay {display: none !important;}
-		</style>
-	<?php } 	
-}
-add_action( 'wp_head', 'hmca_header_scripts', 10 );
 
 
 
@@ -107,7 +161,7 @@ function hmca_related_posts_shortcode( $atts ) {
             'post_type' => 'post',
             'order' => 'DESC',
             'orderby' => 'date',
-            'posts' => 3,
+            'posts_per_page' => 3,
             'post_status' => 'publish',
             'category__in' => array($currentcategories),
             'date_query' => array(
@@ -121,12 +175,12 @@ function hmca_related_posts_shortcode( $atts ) {
         $rpquery = new WP_Query( $rpargs );
         if ( $rpquery->have_posts() ) { ?>
             <div class="relatedposts">
-            <?php while( $obquery->have_posts() ) : $obquery->the_post();
+            <?php while( $rpquery->have_posts() ) : $rpquery->the_post();
                 $id = get_the_ID(); ?>
             
                 <div class="single-related-post">
-                    <a href="<?php echo the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail($id, 'medium'); ?>"></a>
-                    <a href="<?php echo the_permalink(); ?>"><h4><?php echo the_title(); ?></a>
+                    <a href="<?php echo the_permalink(); ?>"><?php echo get_the_post_thumbnail($id, 'medium'); ?></a>
+                    <a href="<?php echo the_permalink(); ?>"><h4><?php echo the_title(); ?></h4></a>
                 </div>
 
             <?php endwhile; ?>
@@ -155,7 +209,7 @@ function hmca_popular_posts_shortcode( $atts ) {
             'post_type' => 'post',
             'order' => 'DESC',
             'orderby' => 'comment_count',
-            'posts' => 10,
+            'posts_per_page' => 10,
             'post_status' => 'publish',
             'date_query' => array(
                 array(
@@ -168,7 +222,7 @@ function hmca_popular_posts_shortcode( $atts ) {
         $ppquery = new WP_Query( $ppargs );
         if ( $ppquery->have_posts() ) { ?>
             <ul class="hmca-popular-posts">
-            <?php while( $obquery->have_posts() ) : $obquery->the_post();
+            <?php while( $ppquery->have_posts() ) : $ppquery->the_post();
                 $id = get_the_ID(); ?>
             
                 <li><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></li>
