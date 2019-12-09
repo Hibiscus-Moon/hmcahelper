@@ -123,7 +123,3 @@ function hmca_optin_bar_shortcode( $atts ) {
 }
 
 
-
-
-
-?>
