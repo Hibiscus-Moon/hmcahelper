@@ -271,10 +271,9 @@ function hmca_checkout_login_disclaimer() {
 
 
 
-/**
- * Remove the "Cancel" button from the My Subscriptions table for CCH Payment Plan users
- *
- */
+// =============================================================================
+ // Remove the "Cancel" button from the My Subscriptions table for CCH Payment Plan users
+// =============================================================================
 function eg_remove_my_subscriptions_button( $actions, $subscription ) {
 
     $currentuser = wp_get_current_user(); 
@@ -304,3 +303,49 @@ function eg_remove_my_subscriptions_button( $actions, $subscription ) {
     }
 }
 add_filter( 'wcs_view_subscription_actions', 'eg_remove_my_subscriptions_button', 100, 2 );
+
+
+
+
+
+// =============================================================================
+// WooCommerce - Custom CCH Email Header
+// =============================================================================
+function woocommerce_custom_cch_receipt( $email_heading, $order ) {
+    global $woocommerce;
+    $items = $order->get_items();
+    $cchproducts = array('27820', '27821', '27822', '49951', '49952');
+
+
+    foreach ( $items as $item ) {
+        $product_id = $item['product_id'];
+        if ( in_array($product_id, $cchproducts)) {
+            $email_heading = 'Thank you for registering!';
+        }
+        return $email_heading;
+    }
+}
+add_filter( 'woocommerce_email_heading_customer_completed_order', 'woocommerce_custom_cch_receipt', 10, 5 );
+
+
+
+
+// =============================================================================
+// Woocommerce - Custom CCH Email Subject Line
+// =============================================================================
+function woocommerce_customer_cch_email_subject( $subject, $order ) {
+    global $woocommerce;
+    $items = $order->get_items();
+    $cchproducts = array('27820', '27821', '27822', '49951', '49952');
+
+
+    foreach ( $items as $item ) {
+        $product_id = $item['product_id'];
+         if ( in_array($product_id, $cchproducts)) {
+            $subject = sprintf( 'Congrats! Your registration is complete!' );
+        }
+        return $subject;
+    }
+
+}
+add_filter('woocommerce_email_subject_customer_completed_order', 'woocommerce_customer_cch_email_subject', 1, 2);

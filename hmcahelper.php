@@ -3,7 +3,7 @@
 Plugin Name: Hibiscus Moon Helper
 Plugin URI:  https://www.coreymwinter.com
 Description: Custom Wordpress Functions for Hibiscus Moon
-Version:     2.0.6
+Version:     2.0.7
 Author:      Corey Winter
 Author URI:  https://coreymwinter.com
 License:     GPLv2
