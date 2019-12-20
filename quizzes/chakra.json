@@ -91,7 +91,7 @@
             "question" : "Do you suffer with anxiety?",
             "question_section" : "Root Chakra",
             "answers" : [
-                {"answer" : "I suffer with anxiety on a day to day business.", "value" : -2},
+                {"answer" : "I suffer with anxiety on a day to day basis.", "value" : -2},
                 {"answer" : "I am often anxious.", "value" : -1},
                 {"answer" : "I have a normal level of anxiety.", "value" : 0},
                 {"answer" : "I don’t have anxiety. I am cool as a cucumber.", "value" : 1},

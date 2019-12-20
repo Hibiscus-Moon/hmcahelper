@@ -3,7 +3,7 @@
 Plugin Name: Hibiscus Moon Helper
 Plugin URI:  https://www.coreymwinter.com
 Description: Custom Wordpress Functions for Hibiscus Moon
-Version:     2.0.7
+Version:     2.0.8
 Author:      Corey Winter
 Author URI:  https://coreymwinter.com
 License:     GPLv2
@@ -146,8 +146,9 @@ add_action('wp_enqueue_scripts', 'hmca_enqueue_scripts');
 
 
 function hmca_quiz_form_chakra( $questions = [] ) {
+    echo '<h1>Chakra Quiz</h1>';
     echo '<div id="progressBar" data-total="' . count($questions) . '"></div>';
-    echo '<form action="' . $_SERVER['REQUEST_URI'] . '" method="post">';
+    echo '<form action="' . $_SERVER['REQUEST_URI'] . '" method="post" class="chakraquiz">';
     
     //Questions
     foreach ($questions as $question) {
@@ -183,8 +184,9 @@ function hmca_quiz_form_chakra( $questions = [] ) {
 }
 
 function hmca_quiz_form_intelligence( $questions = [] ) {
+	echo '<h1>Multiple Intelligence Quiz</h1>';
     echo '<div id="progressBar" data-total="' . count($questions) . '"></div>';
-    echo '<form action="' . $_SERVER['REQUEST_URI'] . '" method="post">';
+    echo '<form action="' . $_SERVER['REQUEST_URI'] . '" method="post" class="intelligencequiz">';
     
     //Questions
     foreach ($questions as $question) {

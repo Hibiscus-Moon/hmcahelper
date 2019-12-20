@@ -54,6 +54,12 @@ function hmca_footer_scripts() { ?>
             acEnableTracking();
         }
     </script>
+
+    <script type="text/javascript">
+        // This code fixes the apostrophes in this section's title.
+        var x = document.getElementByClassName("merciful-heading");
+        x.innerHTML = x.innerHTML.replace(/’/g, "'");
+    </script>
 <?php }
 add_action( 'wp_footer', 'hmca_footer_scripts', 10);
 

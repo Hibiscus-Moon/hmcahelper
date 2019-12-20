@@ -14,3 +14,33 @@
 .graph .label {
     text-align: right;
 }
+
+.intelligencequiz table {width: 100%;}
+
+.intelligencequiz td {
+	border-top: 1px solid #ddd;
+	padding: 0.5em 0.625em;
+	vertical-align: middle;
+}
+
+.intelligencequiz button,
+.chakraquiz button {
+	text-transform: uppercase;
+    font-family: 'MuseoSans700';
+    font-size: 20px !important;
+    letter-spacing: 3px;
+    background: #5E1273 !important;
+    color: #fff !important;
+    padding: 15px 35px;
+    border: none;
+    margin: 15px auto;
+    line-height: 1 !important;
+    display: inline-block;
+}
+
+.intelligencequiz button:hover,
+.chakraquiz button:hover {
+	cursor: pointer;
+	background: #BBE9F6 !important;
+    color: #5E1273 !important;
+}

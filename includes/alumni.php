@@ -28,11 +28,11 @@ function alumni_post_type() {
 // Set other options for Optin Bars post type
      
     $args = array(
-        'label'               => __( 'optinbar' ),
+        'label'               => __( 'Alumni' ),
         'description'         => __( 'HMCA Alumni' ),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'editor' ),
+        'supports'            => array( 'title' ),
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
@@ -88,6 +88,76 @@ function cmb2_alumni_metabox() {
 		// 'closed'     => true, // Keep the metabox closed by default
 	) );
 
+    $hmcaalumni->add_field( array(
+            'name'    => 'Description',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'description',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Business',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'business',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Location',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'location',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Email',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'email',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Phone',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'phone',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Website',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'website',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Facebook',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'facebook',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name'    => 'Twitter',
+            'desc'    => '',
+            'default' => '',
+            'id'      => $prefix . 'twitter',
+            'type'    => 'text',
+    ) );
+
+    $hmcaalumni->add_field( array(
+            'name' => 'Featured',
+            'desc' => '',
+            'id'   => $prefix . 'featured',
+            'type' => 'checkbox',
+    ) );
 
 }
 
