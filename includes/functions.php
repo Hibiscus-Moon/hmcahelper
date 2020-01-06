@@ -11,6 +11,25 @@ function hmca_header_scripts(){
         </style>
     <?php } ?>
 
+    <!-- Facebook Pixel Code -->
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js&#39;);
+    fbq('init', '241753902680051');
+    fbq('track', 'PageView');
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=241753902680051&ev=PageView&noscript=1" /></noscript>
+
+    <!-- End Facebook Pixel Code -->
+
     <!-- Deadline Funnel -->
     <script type="text/javascript" data-cfasync="false">function SendUrlToDeadlineFunnel(e){var r,t,c,a,h,n,o,A,i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",d=0,l=0,s="",u=[];if(!e)return e;do r=e.charCodeAt(d++),t=e.charCodeAt(d++),c=e.charCodeAt(d++),A=r<<16|t<<8|c,a=A>>18&63,h=A>>12&63,n=A>>6&63,o=63&A,u[l++]=i.charAt(a)+i.charAt(h)+i.charAt(n)+i.charAt(o);while(d<e.length);s=u.join("");var C=e.length%3;var decoded = (C?s.slice(0,C-3):s)+"===".slice(C||3);decoded = decoded.replace("+", "-");decoded = decoded.replace("/", "_");return decoded;} var url = SendUrlToDeadlineFunnel(location.href);var parentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(document.referrer)) : "";(function() {var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.setAttribute("data-scriptid", "dfunifiedcode");s.src ="https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkRcL0Y5bHdhNnBZUU5NUUNiTWV6M29BPT0iLCJ2YWx1ZSI6IjZEZUhneXJXclwvb0ZrU1dRdFZ5Nk1nPT0iLCJtYWMiOiJjMWUyZTMyZjNhN2NmYmQ0OTA3ZWY5Y2ZlMmU4YTczMjRhYTVlNDlkN2Y2NzEwMzZjNDA2NDVmMTFlOTIxMjhmIn0=&pageFromUrl="+url+"&parentPageFromUrl="+parentUrl;var s2 = document.getElementsByTagName("script")[0];s2.parentNode.insertBefore(s, s2);})();</script><!-- End Deadline Funnel -->
 
@@ -235,6 +254,60 @@ function hmca_popular_posts_shortcode( $atts ) {
 
             <?php endwhile; ?>
             </ul>
+        <?php }
+        
+    wp_reset_postdata();
+    $myvariable = ob_get_clean();
+    return $myvariable;
+}
+
+
+
+
+add_action( 'after_setup_theme', 'new_image_sizes' );
+function new_image_sizes() {
+    add_image_size( 'home-thumb', 375 ); // 375 pixels wide (and unlimited height)
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Shortcode for single blog post related articles
+ */
+add_shortcode( 'hmca_recent_posts', 'hmca_recent_posts_shortcode' );
+function hmca_recent_posts_shortcode( $atts ) {
+    ob_start();
+    
+    // define query parameters based on attributes
+        $rpargs = array(
+            'post_type' => 'post',
+            'order' => 'DESC',
+            'orderby' => 'date',
+            'posts_per_page' => 3,
+            'post_status' => 'publish',
+        );
+
+        $rpquery = new WP_Query( $rpargs );
+        if ( $rpquery->have_posts() ) { ?>
+            <div class="homerecentposts">
+            <?php while( $rpquery->have_posts() ) : $rpquery->the_post();
+                $id = get_the_ID(); ?>
+            
+                <div class="single-recent-post">
+                    <a href="<?php echo the_permalink(); ?>"><?php echo get_the_post_thumbnail($id, 'home-thumb'); ?></a>
+                    <div class="recent-post-bottom">
+                        <a href="<?php echo the_permalink(); ?>"><h3><?php echo the_title(); ?></h3></a>
+                    </div>
+                </div>
+
+            <?php endwhile; ?>
+            </div>
         <?php }
         
     wp_reset_postdata();

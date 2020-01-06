@@ -280,17 +280,16 @@ function eg_remove_my_subscriptions_button( $actions, $subscription ) {
     $currentuserid = $currentuser->ID;
     $currentuseremail = $currentuser->user_email; 
 
-    if(wcs_user_has_subscription($currentuserid, '27822', 'any') ) {
-
-        foreach ( $actions as $action_key => $action ) {
+    foreach ( $actions as $action_key => $action ) {
+        if(wcs_user_has_subscription($currentuserid, '27822', 'any') ) {
             switch ( $action_key ) {
-/*                case 'change_payment_method':   // Hide "Change Payment Method" button?*/
+    //          case 'change_payment_method':   // Hide "Change Payment Method" button?
     //          case 'change_address':      // Hide "Change Address" button?
     //          case 'switch':          // Hide "Switch Subscription" button?
     //          case 'resubscribe':     // Hide "Resubscribe" button from an expired or cancelled subscription?
     //          case 'pay':         // Hide "Pay" button on subscriptions that are "on-hold" as they require payment?
     //          case 'reactivate':      // Hide "Reactive" button on subscriptions that are "on-hold"?
-             case 'cancel':          // Hide "Cancel" button on subscriptions that are "active" or "on-hold"?
+                case 'cancel':          // Hide "Cancel" button on subscriptions that are "active" or "on-hold"?
                     unset( $actions[ $action_key ] );
                     break;
                 default: 
@@ -298,9 +297,9 @@ function eg_remove_my_subscriptions_button( $actions, $subscription ) {
                     break;
             }
         }
-        return $actions;
-
     }
+    return $actions;
+    
 }
 add_filter( 'wcs_view_subscription_actions', 'eg_remove_my_subscriptions_button', 100, 2 );
 
