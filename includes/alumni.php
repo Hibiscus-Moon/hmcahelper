@@ -138,7 +138,7 @@ function cmb2_alumni_metabox() {
 
     $hmcaalumni->add_field( array(
             'name'    => 'Facebook',
-            'desc'    => '',
+            'desc'    => 'Enter the username of the Facebook profile address only',
             'default' => '',
             'id'      => $prefix . 'facebook',
             'type'    => 'text',
@@ -146,15 +146,15 @@ function cmb2_alumni_metabox() {
 
     $hmcaalumni->add_field( array(
             'name'    => 'Twitter',
-            'desc'    => '',
+            'desc'    => 'Enter the username of the Twitter profile only',
             'default' => '',
             'id'      => $prefix . 'twitter',
             'type'    => 'text',
     ) );
 
     $hmcaalumni->add_field( array(
-            'name' => 'Featured',
-            'desc' => '',
+            'name' => 'Is this student an Advanced Crystal Master?',
+            'desc' => 'Check for yes; leave unchecked to indicate that the student is a Certified Crystal Healer.',
             'id'   => $prefix . 'featured',
             'type' => 'checkbox',
     ) );
