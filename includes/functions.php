@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 function hmca_header_scripts(){ 
 
     $id = get_the_ID();
@@ -14,14 +17,11 @@ function hmca_header_scripts(){
     <!-- Facebook Pixel Code -->
 
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js&#39;);
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
     fbq('init', '241753902680051');
     fbq('track', 'PageView');
     </script>
@@ -228,35 +228,20 @@ function hmca_related_posts_shortcode( $atts ) {
 add_shortcode( 'hmca_popular_posts', 'hmca_popular_posts_shortcode' );
 function hmca_popular_posts_shortcode( $atts ) {
     ob_start();
-    
-    // define query parameters based on attributes
-        $ppargs = array(
-            'post_type' => 'post',
-            'order' => 'DESC',
-            'orderby' => 'comment_count',
-            'posts_per_page' => 10,
-            'post_status' => 'publish',
-            'date_query' => array(
-                array(
-                    'after'     => 'January 1st, 2017',
-                    'inclusive' => true,
-                ),
-            ),
-        );
 
-        $ppquery = new WP_Query( $ppargs );
-        if ( $ppquery->have_posts() ) { ?>
-            <ul class="hmca-popular-posts">
-            <?php while( $ppquery->have_posts() ) : $ppquery->the_post();
-                $id = get_the_ID(); ?>
+    $newhereitems = cmb2_get_option( 'hmcaoptions', 'hmca_newhere_posts' ); ?>
+
+    <ul class="hmca-popular-posts">
+
+        <?php foreach ( $newhereitems as $newhereitem ) {  ?>
             
-                <li><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></li>
+            <li><a href="<?php echo get_the_permalink($newhereitem); ?>"><?php echo get_the_title($newhereitem); ?></a></li>
 
-            <?php endwhile; ?>
-            </ul>
-        <?php }
+        <?php } ?>
+
+    </ul>
         
-    wp_reset_postdata();
+    <?php wp_reset_postdata();
     $myvariable = ob_get_clean();
     return $myvariable;
 }
@@ -268,9 +253,6 @@ add_action( 'after_setup_theme', 'new_image_sizes' );
 function new_image_sizes() {
     add_image_size( 'home-thumb', 375 ); // 375 pixels wide (and unlimited height)
 }
-
-
-
 
 
 
@@ -314,3 +296,5 @@ function hmca_recent_posts_shortcode( $atts ) {
     $myvariable = ob_get_clean();
     return $myvariable;
 }
+
+

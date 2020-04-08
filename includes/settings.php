@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Get the bootstrap! If using as a plugin, REMOVE THIS!
- */
-require_once WPMU_PLUGIN_DIR . '/cmb2-attached-posts/cmb2-attached-posts-field.php';
-
 
 /**
  * Hibiscus Moon Crystal Academy
@@ -77,7 +72,7 @@ function hmcasite_register_settings_metabox() {
 	 * Prefix is not needed.
 	 */
 
-	$hmca_settings->add_field( array(
+	/*$hmca_settings->add_field( array(
             'name'        => __( 'Optin Bar Pages' ),
             'id'          => 'hmca_optinbar_pages',
             'type'    => 'custom_attached_posts',
@@ -89,6 +84,27 @@ function hmcasite_register_settings_metabox() {
 				'post_type'      => 'page',
 				'order' => 'ASC',
             	'orderby' => 'title',
+			), // override the get_posts args
+		),
+	) );*/
+
+	$hmca_settings->add_field( array(
+            'name'        => __( 'New Here Blog Posts' ),
+            'id'          => 'hmca_newhere_posts',
+            'type'    => 'custom_attached_posts',
+            'options' => array(
+			'show_thumbnails' => false, // Show thumbnails on the left
+			'filter_boxes'    => true, // Show a text box for filtering the results
+			'query_args'      => array(
+				'posts_per_page' => 500,
+				'post_type'      => 'post',
+				'order' => 'DESC',
+            	'orderby' => 'comment_count',
+            	'date_query' => array(
+			        array(
+			            'after' => '2 years ago',
+			        ),
+			    ),
 			), // override the get_posts args
 		),
 	) );
@@ -123,12 +139,3 @@ function hmcasettings_get_option( $key = '', $default = false ) {
 	return $val;
 }
 
-
-
-
-
-
-
-
-
-?>

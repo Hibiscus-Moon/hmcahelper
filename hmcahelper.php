@@ -3,14 +3,14 @@
 Plugin Name: Hibiscus Moon Helper
 Plugin URI:  https://www.coreymwinter.com
 Description: Custom Wordpress Functions for Hibiscus Moon
-Version:     2.0.9
+Version:     2.1.0
 Author:      Corey Winter
 Author URI:  https://coreymwinter.com
 License:     GPLv2
 */
 
 /**
- * Copyright (c) 2019 Corey Winter (email : hello@coreymwinter.com)
+ * Copyright (c) 2020 Corey Winter (email : hello@coreymwinter.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
@@ -49,11 +49,14 @@ if(!class_exists('HMCA_Custom_Plugin'))
               require_once __DIR__ . '/CMB2/init.php';
             }
 
+            require( 'vendor/cmb2-attached-posts/cmb2-attached-posts-field.php' );
+
             require( 'includes/functions.php' );
             require( 'includes/settings.php' );
             require( 'includes/alumni.php' );
             require( 'includes/blocks.php' );
             require( 'includes/optinbar.php' );
+            require( 'includes/testimonials.php' );
             require( 'includes/woocommerce.php' );
 
             //$plugin = plugin_basename(__FILE__);
@@ -289,38 +292,38 @@ function hmca_tally_answers_intelligence( $quiz, $answers = [] ) {
 
 
 function hmca_display_results_chakra($results = []) {
-    echo '<div><table class="graph">';
+    echo '<div><table class="graph" style="width: 100%;">';
 
     foreach ($results as $key => $value) {
-        echo '<tr>';
-        echo '<td class="label">' . $key . '</td>';
+        echo '<tr style="border-top: 1px solid #eaeaea;">';
+        echo '<td class="label" style="padding-right: 10px;">' . $key . '</td>';
         echo '<td colspan="3"><div class="bar" style="width: ' . ($value + 100)/2 . '%;"></div></td>';
         echo '</tr>';
     }
     
-    echo '<tr>';
+    echo '<tr style="border-top: 1px solid #eaeaea;">';
     echo '<td></td>
         <td>Under-active</td>
         <td>Balanced</td>
         <td>Over-active</td>';
     echo '</tr>';
     echo '</table>';
-    echo '<a class="x-btn x-btn-square x-btn-regular" href="https://students.hibiscusmoon.com/courses/7/activities/69" target="_blank" style="font-size: 24px;">Back to Module #4</a>';
+    echo '<a class="button" href="https://students.hibiscusmoon.com" target="_blank" style="font-size: 16px !important;">Back to the Course</a>';
     echo '</div>';
 }
 
 function hmca_display_results_intelligence($results = []) {
-    echo '<div><table class="graph">';
+    echo '<div><table class="graph" style="width: 100%;">';
 
     foreach ($results as $key => $value) {
-        echo '<tr>';
-        echo '<td class="label">' . $key . '</td>';
+        echo '<tr style="border-top: 1px solid #eaeaea;">';
+        echo '<td class="label" style="padding-right: 10px;">' . $key . '</td>';
         echo '<td style="width: 50%;"><div class="bar" style="width: ' . $value . '%;"></div></td>';
         echo '<td style="text-align: left;">'. $value . '%</td>';
         echo '</tr>';
     }
     echo '</table>';
-    echo '<a class="x-btn x-btn-square x-btn-regular" href="https://students.hibiscusmoon.com/courses/7/activities/75" target="_blank" style="font-size: 24px;">Back to Module #5</a>';
+    echo '<a class="button" href="https://students.hibiscusmoon.com" target="_blank" style="font-size: 16px !important;">Back to the Course</a>';
     echo '</div>';
 }
 
