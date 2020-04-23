@@ -384,7 +384,8 @@ function aelia_get_cart_contents() {
 	}
 	return $cart_contents;
 }
- 
+
+
 // Step 1 - Keep track of cart contents
 add_action( 'wp_loaded', function() {
 	// If there is no session, then we don't have a cart and we should not take
@@ -433,7 +434,8 @@ add_action( 'wp_loaded', function() {
 	}, 10, 2 );
 	
 }, 10 );
- 
+
+
 // Step 3 - Explain customers why they can't add some products to the cart
 add_filter( 'woocommerce_get_price_html', function( $price_html, $product ) {
 	if ( ! $product->is_purchasable() && is_product() ) {
@@ -441,3 +443,34 @@ add_filter( 'woocommerce_get_price_html', function( $price_html, $product ) {
 	}
 	return $price_html;
 }, 10, 2 );
+
+
+function hmca_woocommerce_products_metabox() {
+
+	$prefix = 'hmca_wcp_';
+
+	$cmb = new_cmb2_box( array(
+		'id'            => $prefix . 'metabox',
+		'title'         => 'HMCA Product Options',
+		'object_types'  => array( 'product' ), // Post type
+		'context'       => 'side',
+		'priority'      => 'low',
+		// 'show_names'    => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // Keep the metabox closed by default
+	) );
+
+	$cmb->add_field( array(
+		'name'             => 'Select Template',
+		'desc'             => 'Select an option',
+		'id'               => $prefix . 'template',
+		'type'             => 'select',
+		'show_option_none' => true,
+		'default'          => 'default',
+		'options'          => array(
+			'default' 	=> 'Default',
+			'simple_gf' => 'Simple Gravity Form',
+		),
+	) );
+}
+add_action( 'cmb2_admin_init', 'hmca_woocommerce_products_metabox' );
