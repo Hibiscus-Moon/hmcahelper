@@ -44,42 +44,58 @@ add_action( 'wp_head', 'hmca_header_scripts', 10 );
 
 
 function hmca_footer_scripts() { ?>
-    <script type="text/javascript">
-        // Set to false if opt-in required
-        var trackByDefault = true;
+	<script type="text/javascript">
+		// Set to false if opt-in required
+		var trackByDefault = true;
 
-        function acEnableTracking() {
-            var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-            document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
-            acTrackVisit();
-        }
+		function acEnableTracking() {
+			var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
+			document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
+			acTrackVisit();
+		}
 
-        function acTrackVisit() {
-            var trackcmp_email = '';
-            var trackcmp = document.createElement("script");
-            trackcmp.async = true;
-            trackcmp.type = 'text/javascript';
-            trackcmp.src = '//trackcmp.net/visit?actid=799050921&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
-            var trackcmp_s = document.getElementsByTagName("script");
-            if (trackcmp_s.length) {
-                trackcmp_s[0].parentNode.appendChild(trackcmp);
-            } else {
-                var trackcmp_h = document.getElementsByTagName("head");
-                trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
-            }
-        }
+		function acTrackVisit() {
+			var trackcmp_email = '';
+			var trackcmp = document.createElement("script");
+			trackcmp.async = true;
+			trackcmp.type = 'text/javascript';
+			trackcmp.src = '//trackcmp.net/visit?actid=799050921&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+			var trackcmp_s = document.getElementsByTagName("script");
+			if (trackcmp_s.length) {
+				trackcmp_s[0].parentNode.appendChild(trackcmp);
+			} else {
+				var trackcmp_h = document.getElementsByTagName("head");
+				trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+			}
+		}
 
-        if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
-            acEnableTracking();
-        }
-    </script>
+		if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
+			acEnableTracking();
+		}
+	</script>
 
-    <script type="text/javascript">
-        // This code fixes the apostrophes in this section's title.
-        var x = document.getElementByClassName("merciful-heading");
-        x.innerHTML = x.innerHTML.replace(/’/g, "'");
-    </script>
-<?php }
+	<script type="text/javascript">
+	    // This code fixes the apostrophes in this section's title.
+	//    var x = document.getElementByClassName("merciful-heading");
+	//    x.innerHTML = x.innerHTML.replace(/’/g, "'");
+	</script>
+
+	<?php 
+	$id = get_the_ID();
+
+	if ( get_post_meta( $id, 'hmca_zopim', true ) ) { ?>
+	<!--Start of Zendesk Chat Script-->
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+		$.src="https://v2.zopim.com/?3hXmNSOsocmBvv6vZAwxCcFf4t2b0sEI";z.t=+new Date;$.
+		type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+	</script>
+	<!--End of Zendesk Chat Script-->
+	<?php 
+	}
+}
 add_action( 'wp_footer', 'hmca_footer_scripts', 10);
 
 
@@ -298,3 +314,179 @@ function hmca_recent_posts_shortcode( $atts ) {
 }
 
 
+
+
+/**
+ * btc_wplogin_styles
+ * Styles for wp-login.php
+ * 
+ * @return string css
+ * @since  0.1.1 similar to /login-page
+ */
+function hmca_wplogin_styles() { ?>
+<!--	<link rel='stylesheet' id='montserrat-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A400&#038;subset=latin&#038;' type='text/css' media='all' /> -->
+	<style type="text/css">
+		#login {
+			width: 100%;
+			max-width: 450px;
+		}
+		#login p#nav {
+			text-align: center;
+		/*	font-family: montserrat; */
+			font-weight: 300;
+			margin-top: 10px;
+			font-size: 12px;
+		}
+		#login p#backtoblog {
+			text-align: center;
+		/*	font-family: montserrat; */
+			font-weight: 300;
+			margin-top: 30px;
+			font-size: 16px;
+		}
+
+		.login h1 a {
+			background-image: url(https://hibiscusmooncrystalacademy.com/wp-content/uploads/2019/12/HM_Logo_Header-1.png) !important;
+			width: 100% !important;
+			background-size: 100%!important;
+		/*	height: 90px !important; */
+			margin: 0 0 40px !important;
+			max-width: 450px;
+		}
+		body {
+			/* background-image: url(<?php // echo $bkg ?>) !important; */
+			background-position: left center !important;
+			background-repeat: no-repeat !important;
+			background-size:cover!important;
+			background-attachment:fixed!important;
+			display: table;
+			width: 100%;
+		}
+		body.login form {
+			background: transparent;
+			/* color: #fff; */
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			padding-bottom: 0;
+			padding-top: 0;
+			max-width: 320px;
+			margin: 20px auto 0;
+			border: 0;
+		}
+		.login form .input, .login input[type=text] {
+			padding: 4px 8px;
+			background: #eaeaea !important;
+			color: #555 !important;
+			border-radius: 2px;
+		}
+		.login form input#rememberme {
+
+		}
+
+		.login form .forgetmenot {
+			float: none;
+			text-align: right;
+			margin-bottom: 20px !important;
+		}
+		.login form label[for="user_login"], .login form label[for="user_pass"] {
+		/*	font-family: montserrat; */
+			font-weight: 300;
+		}
+		.login form label[for="rememberme"] {
+		/*	font-family: montserrat; */
+			font-size: 14px;
+			font-weight: 300;
+		}
+
+		.login label,
+		.login #backtoblog a,
+		.login #nav a {
+		/*	color:#fff!important; */
+		}
+		body.login .message {
+			border: none;
+			background: none;
+		/*	color: #fff; */
+		/*	font-family: montserrat; */
+			text-align: center;
+			font-size: 16px;
+			font-weight: 300;
+			padding: 0 10px;
+			max-width: 320px;
+			margin: 0 auto;
+		}
+		.wp-core-ui .button-primary {
+			background: #5e1172!important;
+			border: 2px solid #5e1172 !important;
+			border-radius: 0;
+			box-shadow: none!important;
+			text-shadow: none!important;
+			text-transform: uppercase;
+		/*	font-family: montserrat; */
+			float: none;
+			width: 100%;
+			padding: 7px !important;
+			height: auto !important;
+			font-size: 18px !important;
+			line-height: 28px !important;
+		}
+		.wp-core-ui .button-primary:hover {
+			background: #bbe9f6 !important;
+			color: #5e1172 !important;
+		}
+		.description {
+			color: #e7e7e7;
+			text-align: center;
+		}
+		::-moz-selection { background: #5e1172; color: #fff; }
+		::selection { background: #5e1172; color: #fff; }
+	</style>
+    <?php 
+}
+add_action( 'login_head', 'hmca_wplogin_styles' );
+
+/**
+ * Filter the wp-login.php logo link
+ */
+function hmca_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'hmca_login_logo_url' );
+
+// Auto login after reset password success
+function hmca_password_reset_login( $user ) {
+	wp_set_auth_cookie( $user->ID, true );
+	do_action( 'wp_login', $user->user_login );
+	wp_redirect( site_url( '/my-account/' ) );
+	exit;
+}
+add_action( 'after_password_reset', 'hmca_password_reset_login', 10, 1 );
+
+// Redirect wp-login.php for logged in users
+function hmca_redirect_wp_login() {
+	if ( ( $GLOBALS['pagenow'] === 'wp-login.php' ) && is_user_logged_in() ) {
+		wp_redirect( site_url( '/my-account/' ) );
+	}
+}
+add_action( 'init', 'hmca_redirect_wp_login' );
+
+function hmca_login_errors(){
+	return '<strong>Login Error:</strong> Please try again.';
+}
+add_filter( 'login_errors', 'hmca_login_errors' );
+
+/**
+ * Prevent empty password brute force attacks
+ */
+function hmca_wplogin_scripts() { ?>
+<script type="text/javascript">
+	document.forms["loginform"].onsubmit = function(){
+		if( "" == document.forms["loginform"]["user_pass"].value ) {
+			alert( "Please enter a password" );
+			return false;
+		}
+	}
+</script>
+<?php 
+}
+add_action( 'login_footer', 'hmca_wplogin_scripts' );

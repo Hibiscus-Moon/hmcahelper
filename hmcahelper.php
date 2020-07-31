@@ -50,6 +50,7 @@ if(!class_exists('HMCA_Custom_Plugin'))
             }
 
             require( 'vendor/cmb2-attached-posts/cmb2-attached-posts-field.php' );
+            require( 'vendor/cmb2-post-search-field/cmb2_post_search_field.php' );
 
             require( 'includes/functions.php' );
             require( 'includes/settings.php' );
@@ -331,3 +332,196 @@ function hmca_display_results_intelligence($results = []) {
 function hmca_load_quiz_file($quiz) {
     return json_decode(file_get_contents(plugin_dir_path(__FILE__) . 'quizzes/' . $quiz . '.json'));
 }
+
+
+function hmca_page_redirect_metabox() {
+
+	$p = 'hmca_';
+
+	$cmb = new_cmb2_box( array(
+		'id'            => $p . 'redirect_metabox',
+		'title'         => __( 'Redirect Meta', 'zbt' ),
+		'object_types'  => array( 'page' ),
+		'context'       => 'normal',
+		'priority'      => 'default',
+	) );
+
+	$now = date( 'm-d-y, H:i' );
+
+	$cmb->add_field( array(
+		'name'  => __( 'Time and date to start redirecting', 'zbt' ),
+		'desc'  => __( 'Will redirect any time after this. Compares a UTC timestamp to webserver time, currently: ' . $now . ' (mm-dd-yy, hh:mm)', 'zbt' ),
+		'id'    => $p . 'time_to_redirect',
+		'type'  => 'text_datetime_timestamp',
+	) );
+
+	$cmb->add_field( array(
+		'name'              => __( 'Redirect to:', 'zbt' ),
+		'id'                => $p . 'redirect_to',
+		'type'              => 'post_search_text', // This field type
+		'post_type'         => array( 'page' ),
+		'desc'              => __( 'Use search icon popup to find a page, or enter the <code>Post ID</code> to redirect to. You may also enter a fully qualified url. For example: <code>https://wpguru4u.com</code>', 'zbt' ),
+		'select_type'       => 'radio',
+		'select_behavior'   => 'replace',
+	) );
+
+	$cmb->add_field( array(
+		'name'  => __( 'Time and date to stop redirecting (optional)', 'zbt' ),
+		'desc'  => __( 'Will stop redirecting on this time/date (using the same format above) and will delete the Redirect Meta.', 'zbt' ),
+		'id'    => $p . 'delete_redirect',
+		'type'  => 'text_datetime_timestamp',
+	) );
+}
+add_action( 'cmb2_admin_init', 'hmca_page_redirect_metabox' );
+
+
+/**
+ * Maybe redirect 
+ * 
+ * @since 0.0.1
+ */
+function hmca_page_maybe_redirect() {
+	global $post;
+	if ( ! is_object( $post ) || is_search() ) {
+		return;
+	}
+
+	if ( current_user_can( 'administrator' ) )
+		return;
+
+	$p = 'hmca_';
+
+	$where = get_post_meta( $post->ID, $p . 'redirect_to', true );
+	if ( ! $where ) 
+		return;
+
+	$now = time();
+	$then =  get_post_meta( $post->ID, 'time_to_redirect', true );
+
+	if ( $now > $then && $where ) {
+
+		$stop = get_post_meta( $post->ID, 'delete_redirect', true );
+
+		if ( $stop && $now > $stop ) {
+
+			delete_post_meta( $post->ID, 'redirect_to' );
+			delete_post_meta( $post->ID, 'time_to_redirect' );
+			delete_post_meta( $post->ID, 'delete_redirect' );
+			if ( function_exists( 'w3tc_flush_post' ) )
+				w3tc_flush_post( $post->ID );
+
+		} else {
+			hmca_page_redirect( $where );
+		}
+	}
+}
+
+/**
+ * Redirect 
+ * 
+ * @since 0.0.1
+ */
+function hmca_page_redirect( $where ) {
+	if ( $where ) {
+		if ( (int) $where ) {
+			wp_safe_redirect( esc_url( get_permalink( $where ) ) );
+		} else {
+			wp_redirect( $where );
+		}
+		exit;
+	}
+}
+add_action( 'template_redirect', 'hmca_page_maybe_redirect' );
+
+
+
+
+function hmca_page_core_metabox() {
+
+	$p = 'hmca_';
+
+	$cmb = new_cmb2_box( array(
+		'id'            => $p . 'metabox',
+		'title'         => 'HMCA Meta',
+		'object_types'  => array( 'page' ),
+		'context'       => 'normal',
+		'priority'      => 'default',
+	) );
+
+	$cmb->add_field( array(
+		'name'  => 'Enable Zopim Chat',
+		'id'    => $p . 'zopim',
+		'type'  => 'checkbox',
+	) );
+
+}
+add_action( 'cmb2_admin_init', 'hmca_page_core_metabox' );
+
+
+function hmca_acc_shortcode( $atts = array() ) { 
+	$output = ob_start(); ?>
+	<div class="accreditations" style="text-align: center">
+		<a href="https://myiict.com/" target="_blank">
+			<img alt="Accredited In" src="https://hibiscusmooncrystalacademy.com/wp-content/themes/hibiscusmoon/img/seals/iict.png">
+		</a>
+		<table style="margin: 0 auto">
+			<tr>
+				<td>
+					<a href="http://www.worldmeta.org/" target="_blank">
+						<img alt="Accredited In" src="https://hibiscusmooncrystalacademy.com/wp-content/themes/hibiscusmoon/img/seals/world-metaphysical-association.jpg" width="128">
+					</a>
+				</td>
+				<td>
+					<a href="http://www.ach-accreditation.org/" target="_blank">
+						<img alt="Accredited In" src="https://hibiscusmooncrystalacademy.com/wp-content/themes/hibiscusmoon/img/seals/achh.jpg"  width="128">
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://www.issseem.org/" target="_blank">
+						<img alt="Accredited In" src="https://hibiscusmooncrystalacademy.com/wp-content/themes/hibiscusmoon/img/seals/ieha.png"  width="128">
+					</a>
+				</td>
+				<td>
+					<a href="http://getconnected.resonance.is/" target="_blank">
+						<img alt="Accredited In" src="https://hibiscusmooncrystalacademy.com/wp-content/themes/hibiscusmoon/img/seals/resonance-project-foundation.jpg"  width="128">
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'hmca_acc', 'hmca_acc_shortcode' );
+
+function hmca_optin_shortcode( $atts = array() ) {
+	$defaults = array (
+		'id' => '53'
+	);
+	// Parse incoming $atts into an array and merge it with $defaults
+	$args = wp_parse_args( $atts, $defaults );
+	$id = $args['id'];
+
+	ob_start(); ?>
+	<div id="hmca_ac_form" class="hmca_ac_form _form_<?php echo $id ?>"></div><script src="https://hibiscusmoon.activehosted.com/f/embed.php?id=<?php echo $id ?>" type="text/javascript" charset="utf-8"></script>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'hmca_optin', 'hmca_optin_shortcode' );
+
+
+
+
+function hmca_my_theme_custom_upload_mimes( $existing_mimes ) { 
+    $existing_mimes['woff'] = 'application/x-font-woff';
+    $existing_mimes['ttf'] = 'font/ttf';
+    $existing_mimes['eot'] = 'font/eot';
+
+
+    // Add webm to the list of mime types. $existing_mimes['webm'] = 'video/webm';
+    // Return the array back to the function with our added mime type.
+    return $existing_mimes;
+}
+add_filter( 'mime_types', 'hmca_my_theme_custom_upload_mimes' );
